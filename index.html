@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>墨云·IP模糊派生灵活生产平台 (Moyu Cloud)</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+  <!-- Left Sidebar Nav -->
+  <aside class="sidebar">
+    <div class="logo-area">
+      ☁️ 墨云 Moyu Cloud <span class="logo-badge">v1.0.0</span>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item active" data-view="console">
+        <span class="nav-icon">📊</span> <span class="nav-label">首页控制台</span>
+      </li>
+      <li class="nav-item" data-view="ip-engine">
+        <span class="nav-icon">🎨</span> <span class="nav-label">IP识别引擎</span>
+      </li>
+      <li class="nav-item" data-view="flex-match">
+        <span class="nav-icon">⚡</span> <span class="nav-label">柔性生产匹配</span>
+      </li>
+      <li class="nav-item" data-view="sample-collab">
+        <span class="nav-icon">🤝</span> <span class="nav-label">打样协同</span>
+      </li>
+      <li class="nav-item" data-view="supply-chain">
+        <span class="nav-icon">📦</span> <span class="nav-label">供应链全流程</span>
+      </li>
+      <li class="nav-item" data-view="portal-order">
+        <span class="nav-icon">🌐</span> <span class="nav-label">门户与订单</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="header-title">
+        <span id="current-title">首页控制台</span>
+        <span style="color:#94a3b8;font-size:0.85rem;">/ Moyu Cloud IP Derivative Platform</span>
+      </div>
+      <div class="header-actions">
+        <span class="user-badge">🟢 CI/CD 全流水线: PASS</span>
+        <span style="font-size:0.85rem;color:#475569;">IP版权方 (Moyu Admin)</span>
+      </div>
+    </header>
+
+    <!-- Content Views -->
+    <main class="content-area">
+
+      <!-- View 1: Console / Dashboard -->
+      <section id="view-console" class="view-panel active">
+        <div class="metrics-grid">
+          <div class="card">
+            <div class="card-title">活跃协同任务</div>
+            <div class="card-value highlight">1,284</div>
+          </div>
+          <div class="card">
+            <div class="card-title">近30天 IP衍生匹配率</div>
+            <div class="card-value">94.8%</div>
+          </div>
+          <div class="card">
+            <div class="card-title">交付在途订单</div>
+            <div class="card-value">452</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Sonar 单元测试覆盖率</div>
+            <div class="card-value" style="color:#16a34a;">82.5%</div>
+          </div>
+        </div>
+
+        <h3 style="margin-bottom:16px;">敏捷任务看板</h3>
+        <div class="kanban-grid">
+          <div class="kanban-col">
+            <div class="kanban-col-header">待评估 <span>(1)</span></div>
+            <div class="task-item">
+              <strong>#TASK-102 IP矢量提取与识别</strong>
+              <p style="color:#64748b;margin-top:4px;">矢量解析引擎已接入并完成基础特征匹配</p>
+              <span class="task-tag tag-high">优先级：高</span>
+            </div>
+          </div>
+          <div class="kanban-col">
+            <div class="kanban-col-header">处理中 <span>(2)</span></div>
+            <div class="task-item">
+              <strong>#TASK-104 打样自动拆单</strong>
+              <p style="color:#64748b;margin-top:4px;">正在优化多材质拼缝匹配速度</p>
+              <span class="task-tag tag-mid">优先级：中</span>
+            </div>
+            <div class="task-item">
+              <strong>#TASK-107 生产排期算法优化</strong>
+              <p style="color:#64748b;margin-top:4px;">正在适配工厂端自动化设备接口</p>
+              <span class="task-tag tag-high">优先级：高</span>
+            </div>
+          </div>
+          <div class="kanban-col">
+            <div class="kanban-col-header">测试验证 <span>(1)</span></div>
+            <div class="task-item">
+              <strong>#TASK-108 Sonar 扫描与门禁规则</strong>
+              <p style="color:#64748b;margin-top:4px;">JUnit 全量用例集成完成</p>
+              <span class="task-tag tag-low">优先级：低</span>
+            </div>
+          </div>
+          <div class="kanban-col">
+            <div class="kanban-col-header">已完成 <span>(1)</span></div>
+            <div class="task-item">
+              <strong>#TASK-109 订单状态实时推送</strong>
+              <p style="color:#64748b;margin-top:4px;">对接微信/邮件提醒网关完成</p>
+              <span class="task-tag tag-low">优先级：低</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 2: IP Engine -->
+      <section id="view-ip-engine" class="view-panel">
+        <div class="card" style="margin-bottom:20px;">
+          <h3 style="margin-bottom:12px;">矢量设计稿上传 (SVG / DXF / AI)</h3>
+          <div class="upload-zone" onclick="alert('已导入样例设计稿 artboard_ip_v2.svg (24 图层, 1,842 节点)')">
+            📁 拖拽矢量文件至此处或点击上传<br/>
+            <span style="font-size:0.8rem;color:#94a3b8;margin-top:6px;display:inline-block;">支持 .svg, .dxf, .ai 格式，最大不超过 50MB</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px;">
+          <h4 style="margin-bottom:12px;">AI 矢量特征识别与衍生匹配调参</h4>
+          <div style="display:flex;gap:30px;align-items:center;">
+            <div>
+              <label style="font-size:0.85rem;">特征相似度阈值：</label>
+              <input type="range" id="similarity-slider" min="50" max="99" value="85">
+              <span id="slider-val" style="font-weight:bold;color:var(--primary);">85%</span>
+            </div>
+            <button class="btn btn-primary" id="btn-derive">重新计算衍生建议</button>
+          </div>
+        </div>
+
+        <h3>AI 矢量特征识别与衍生匹配结果</h3>
+        <div id="deriv-container" class="deriv-grid">
+          <!-- Dynamic JS rendering -->
+        </div>
+      </section>
+
+      <!-- View 3: Flex Match -->
+      <section id="view-flex-match" class="view-panel">
+        <div class="card" style="margin-bottom:20px;">
+          <h3 style="margin-bottom:12px;">柔性生产通道匹配与算法设置</h3>
+          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;">
+            <div>
+              <label style="font-size:0.85rem;display:block;margin-bottom:6px;">交期权重：</label>
+              <input type="range" id="weight-delivery" value="35" min="10" max="80"> 35%
+            </div>
+            <div>
+              <label style="font-size:0.85rem;display:block;margin-bottom:6px;">成本权重：</label>
+              <input type="range" id="weight-cost" value="35" min="10" max="80"> 35%
+            </div>
+            <div>
+              <label style="font-size:0.85rem;display:block;margin-bottom:6px;">质量评级权重：</label>
+              <input type="range" id="weight-quality" value="30" min="10" max="80"> 30%
+            </div>
+          </div>
+          <button class="btn btn-primary" id="btn-recalculate-match" style="margin-top:16px;">自动计算最优工厂通道</button>
+        </div>
+
+        <h3>工厂能力与负载匹配列表</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>工厂名称与硬件设备</th>
+              <th>匹配度</th>
+              <th>响应速度</th>
+              <th>估计单价</th>
+              <th>排期预测</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="factory-tbody">
+            <!-- Dynamic JS rendering -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- View 4: Sample Collab -->
+      <section id="view-sample-collab" class="view-panel">
+        <div class="card" style="margin-bottom:20px;">
+          <h3>当前协同项目：#SMP-2026-089 (毛绒小熊 IP 衍生打样)</h3>
+          <p style="color:#64748b;font-size:0.85rem;margin-top:4px;">状态：三阶段打样校样中 | 协同专家：张工（首席样品师）、李设计师</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;">
+          <div class="card">
+            <h4>打样版本对比与 3D/矢量查看</h4>
+            <div style="background:#0f172a;height:240px;border-radius:8px;margin-top:12px;display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:1.1rem;flex-direction:column;gap:8px;">
+              <span>🧸 3D 填充剪裁与缝线定位渲染画布</span>
+              <span style="font-size:0.8rem;color:#94a3b8;">首样 3D 扫描模型 vs 二样实拍修正图</span>
+            </div>
+            <div style="margin-top:16px;display:flex;gap:10px;">
+              <button class="btn btn-primary" onclick="alert('打样单审批已通过！同步发送工厂生产指令。')">审批通过</button>
+              <button class="btn btn-secondary" onclick="alert('已提交重样打样需求单！')">要求重样</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>修改意见与标注记录</h4>
+            <div id="comments-list" style="margin-top:12px;max-height:220px;overflow-y:auto;">
+              <!-- Dynamic JS rendering -->
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px;">
+              <input type="text" id="comment-input" placeholder="添加标注意见..." style="flex:1;padding:8px;border:1px solid #cbd5e1;border-radius:6px;font-size:0.85rem;">
+              <button class="btn btn-primary" id="btn-send-comment">发送</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 5: Supply Chain -->
+      <section id="view-supply-chain" class="view-panel">
+        <div class="card" style="margin-bottom:20px;">
+          <h3>订单编号：#PO-2026-88401 | 客户：潮玩派对有限公司 | 数量：1,200 件</h3>
+          <div class="progress-bar-container">
+            <div class="stage-step done">设计矢量确认<br/>07-28 完成</div>
+            <div class="stage-step done">打样校样通过<br/>08-01 完成</div>
+            <div class="stage-step done">原材料采购<br/>08-03 完成</div>
+            <div class="stage-step active">柔性生产缝制<br/>进行中 (82%)</div>
+            <div class="stage-step">质检与包装<br/>待开始</div>
+            <div class="stage-step">物流交付<br/>待开始</div>
+          </div>
+        </div>
+
+        <h3>生产节点实时状态跟踪</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>节点名称</th>
+              <th>状态</th>
+              <th>计划时间</th>
+              <th>实际/预计完成</th>
+              <th>责任单位/人员</th>
+            </tr>
+          </thead>
+          <tbody id="supply-chain-nodes">
+            <!-- Dynamic JS rendering -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- View 6: Portal & Order -->
+      <section id="view-portal-order" class="view-panel">
+        <div class="card" style="margin-bottom:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h3>三端门户与协同订单概览</h3>
+            <div>
+              <span style="font-size:0.85rem;color:#64748b;">端选择：</span>
+              <select style="padding:6px 12px;border-radius:6px;border:1px solid #cbd5e1;font-size:0.85rem;">
+                <option>IP版权方门户 (Admin)</option>
+                <option>衍生品设计师 Portal</option>
+                <option>跨境卖家 Portal</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <h3>近期跨端协同订单</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>订单号</th>
+              <th>IP名称</th>
+              <th>衍生品类型</th>
+              <th>订购数量</th>
+              <th>当前阶段</th>
+              <th>下单端</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="portal-orders-tbody">
+            <!-- Dynamic JS rendering -->
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

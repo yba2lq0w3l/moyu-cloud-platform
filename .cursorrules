@@ -1,0 +1,15 @@
+# Moyu Cloud Platform - Cursor & AI Rules
+
+## Branch Protection & Commit Guidelines
+- Commit messages must follow Conventional Commits standard: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`.
+- Direct pushes to `main` and `develop` are strictly prohibited. Always submit PR from `feature/<module>` or `fix/<ticket>`.
+- Rebase `develop` daily before creating PR.
+
+## Code Quality & Annotation Standards
+- Add `@Feature`, `@Version`, `@SonarLint` headers to module files.
+- Unit test coverage requirement: >= 70%.
+- Blocker/Critical Sonar issues: 0 allowed.
+
+## Architectural Boundaries
+- Frontend: Single Page Dashboard with high-fidelity UI matching Moyu Cloud IP Derivative specifications.
+- Core Modules: Keep pure functions in `src/modules/` with 100% unit test coverage in `test/`.
