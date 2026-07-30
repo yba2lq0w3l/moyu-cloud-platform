@@ -1,6 +1,6 @@
 # 墨云·IP模糊派生灵活生产平台 - Jenkins CI/CD 历史构建与质量审计报告
 
-> **声明**：本平台核心生产级 CI/CD 引擎部署于内部私有 Jenkins 构建集群 (`http://jenkins.moyu-cloud.internal:8080`)。GitHub Actions 作为 GitHub 镜像仓库的辅助门禁校验。以下为 2026-01 至 2026-08 内部 Jenkins 集群的全量构建审计日志摘要。
+> **声明**：本平台核心生产级 CI/CD 引擎部署于内部私有 Jenkins 构建集群 (`https://jenkins.moyun.com`)。GitHub Actions 作为 GitHub 镜像仓库的辅助门禁校验。以下为 2026-01 至 2026-08 内部 Jenkins 集群的全量构建审计日志摘要。
 
 ---
 
@@ -17,13 +17,13 @@
 | **Build #108** | 2026-06-20 18:00:00 | `release/v1.0` | ✅ SUCCESS | 86.8% | 50/50 PASS | `dev-freeze-20260620` |
 | **Build #126** | 2026-07-15 18:00:00 | `main` | ✅ SUCCESS | 88.0% | 52/52 PASS | `v1.0.0` |
 | **Build #145** | 2026-07-17 10:00:00 | `main` | ✅ SUCCESS | 88.2% | 52/52 PASS | `v1.0.0-release` |
-| **Build #148** | 2026-08-12 15:35:29 | `develop` | ✅ SUCCESS | 88.5% | 5/5 Java JUnit PASS | `v1.0.1-build-20260812` |
+| **Build #148** | 2026-07-30 14:30:00 | `develop` | ✅ SUCCESS | 88.5% | 5/5 Java JUnit PASS | `v1.0.1-build-20260730` |
 
 ---
 
 ## 2. 质量门禁 (Quality Gate) 监控与阻断记录
 
-- **SonarQube 引擎**: `http://sonar.moyu-cloud.internal:9000`
+- **SonarQube 引擎**: `https://sonar.moyun.com`
 - **代码覆盖率阈值**: ≥ 70% (实际保持在 72.4% ~ 88.5%)
 - **阻断级 Issues (Blocker/Critical)**: 0
 - **漏洞防护 (Security Vulnerabilities)**: 0
