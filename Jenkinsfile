@@ -25,7 +25,8 @@ pipeline {
 
         stage('Unit Testing & Coverage') {
             steps {
-                echo 'Executing Node/JUnit Unit Tests...'
+                echo 'Executing Java JUnit 5 & Node Unit Tests...'
+                sh 'mvn clean test'
                 sh 'npm test'
             }
         }
@@ -38,7 +39,8 @@ pipeline {
 
         stage('Build & Package') {
             steps {
-                echo 'Building release package...'
+                echo 'Building Java Spring Boot release package (JAR)...'
+                sh 'mvn clean package -DskipTests'
                 sh 'npm run build'
             }
         }
