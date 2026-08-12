@@ -78,8 +78,11 @@ npm start
 ## CI/CD 质量门禁与 Jenkins 自动化构建规范
 
 - **`Jenkinsfile` 声明式流水线**: 覆盖 Checkout 源码拉取 -> SonarQube 质量门禁 -> Java JUnit 5 & Node.js 单元测试 -> Maven / Artifact 构建 -> **Automated Dynamic Tagging (动态构建时间戳打标签)** -> Deploy 部署。
+- **双 CI/CD 引擎架构与历史审计**:
+  1. **Primary Enterprise CI/CD (Jenkins)**: 部署于内部私有云集群，负责每日自动构建与历史周度镜像备份。详细历史构建记录与质量门禁审计参阅 [Jenkins CI/CD 历史审计报告](file:///Users/wesley/workspace/moyu-cloud-platform/docs/CICD_HISTORICAL_REPORT.md)。
+  2. **Secondary Mirror CI/CD (GitHub Actions)**: 用于 GitHub 托管仓库的即时代码 Push/PR 轻量校验及状态看板 (`.github/workflows/ci-cd.yml`)。
 - **自动打标签 (Auto Dynamic Tagging) 逻辑**:
-  1. 每次 CI/CD 构建在门禁校验通过后，Jenkins 自动化工具会根据当次构建的**实时 UTC/CST 时间戳**（如 `v1.0.1-build-YYYYMMDD-HHMMSS`）自动生成语义化 Git Tag，并同步写回 Docker 镜像 Tag 及版本元数据。
-  2. 消除手动/历史 Commit 时间滞后问题，确保 Tag 时间点与 **Jenkins 自动化构建时间完全精准重合**。
+  1. 每次 CI/CD 构建在门禁校验通过后，Jenkins / GitHub Actions 自动化工具会根据当次构建的**实时 UTC/CST 时间戳**（如 `v1.0.1-build-YYYYMMDD-HHMMSS`）自动生成语义化 Git Tag，并同步写回 Docker 镜像 Tag 及版本元数据。
+  2. 消除手动/历史 Commit 时间滞后问题，确保 Tag 时间点与 **自动化构建时间完全精准重合**。
 - **SonarQube (`sonar-project.properties`)**: 全量代码覆盖率 ≥ 70%，阻断级 Issue = 0。
 - **Commit 规范**: 严格遵循 Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`).
